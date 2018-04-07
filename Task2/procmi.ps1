@@ -7,7 +7,6 @@ if($args.Count -gt 0) {
     for($i=0; $i -lt $args.Count; $i++) {
 
         $fileName = ""+$args[$i]+"--"+$date+".txt"
-        $location = (Get-Location).Path
         $mem = (Get-Process -id $args[$i]).VirtualMemorySize / 1MB
         $ws = (Get-Process -id $args[$i]).WorkingSet 
         New-Item -Path . -Itemtype File -Name $fileName  -Force
@@ -19,5 +18,5 @@ if($args.Count -gt 0) {
     }
          
 } else {
-    Write-Host ("You passed $($args.Count) arguments:")
+    Write-Output("You must atleast pass 1 or more arguments, passed $($args.Count) arguments")
 }
