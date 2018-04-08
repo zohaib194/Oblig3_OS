@@ -8,3 +8,4 @@ https://github.com/PowerShell/PSScriptAnalyzer
 Install-Module -Name PSScriptAnalyzer\
 Invoke-ScriptAnalyzer Task1/myprocinfo.ps1\
 Invoke-ScriptAnalyzer Task2/procmi.ps1
+Invoke-ScriptAnalyzer Task3/chromeinfo.ps1
